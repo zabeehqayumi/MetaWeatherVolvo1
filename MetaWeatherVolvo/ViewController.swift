@@ -11,11 +11,13 @@ import SwiftyJSON
 
 class ViewController: UIViewController {
     
+    //https://www.metaweather.com/2459115/
+
     
     let stockholm = "stockholm"
-    let mountainView = "mountainview"
+    let mountainView = "mountain"
     let london = "london"
-    let newYork = "newyork"
+    let newYork = "2459115"
     let berlin = "berlin"
     let gothenburg = "gothenburg"
     
@@ -69,10 +71,13 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell  = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = arrOfCities[indexPath.row].title
+        let cell  = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TableViewCell
+        cell.myLabel.text = arrOfCities[indexPath.row].title
         return cell
         
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
 
 }
