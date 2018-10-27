@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     let stockholm = "stockholm"
     let mountainView = "mountain"
     let london = "london"
-    let newYork = "2459115"
+    let newYork = "new"
     let berlin = "berlin"
     let gothenburg = "gothenburg"
     
